@@ -1,38 +1,120 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;700&display=swap");
+/* font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+:root {
+  --clr-maroon: #674747;
+  --clr-green: #829460;
+  --clr-pink: #f96666;
+  --clr-grey: #eeeeee;
+  --clr-darkgrey: #4e4e4e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  /* border: 1px solid goldenrod; */
+}
+
+input,
+button {
+  border: transparent;
+}
+
+body {
+  background-color: #f5f8f8;
+}
+h3 {
+  font-family: "Roboto", sans-serif;
+  color: var(--clr-darkgrey);
+  font-size: 1.4rem;
+  letter-spacing: 0.08rem;
+  font-weight: 700;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  padding: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  color: var(--clr-maroon);
+  text-transform: lowercase;
+  background-color: rgb(233, 241, 255);
+  flex-grow: 1;
+  transition: all 0.3s ease;
+}
+.btnsubmit {
+  background-color: var(--clr-green);
+  padding: 0.5rem 1rem;
+  color: var(--clr-grey);
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.section-center {
+  width: 90vw;
+  max-width: 35rem;
+  margin: 5rem auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  padding: 2rem;
+  transition: all 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-control {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.2rem;
+  margin-top: 1.5rem;
+}
+.list-section {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 1rem;
+  transition: all 0.3s ease;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.listItem:hover {
+  background-color: rgb(233, 241, 255);
+}
+.icons {
+  display: flex;
+  gap: 1rem;
+}
+.edit {
+  color: var(--clr-green);
+}
+.delete {
+  color: var(--clr-pink);
+}
+.listItem p {
+  color: var(--clr-darkgrey);
+  font-size: 14px;
+  letter-spacing: 0.1rem;
+}
+.tbtn {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+.toast {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  color: rgb(207, 111, 0);
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
 }
